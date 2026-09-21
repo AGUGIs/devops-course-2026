@@ -1,0 +1,6 @@
+❌ ОШИБКА: Сообщение коммита не соответствует Conventional Commits.
+   Ожидаемый формат: <type>: <description>
+   Примеры: feat: add login, fix: typo in header, docs: update README
+   Ваше сообщение: bad message
+
+Co-authored-by: Cursor <cursoragent@cursor.com>

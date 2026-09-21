@@ -1,0 +1,5 @@
+eaaf113 Revert "feat: add new feature (accidentally broken)"
+fe84ce0 feat: add new feature (accidentally broken)
+98ff637 fix: critical bug in calculator
+2540728 merge: integrate calculator feature
+d5dcb1e docs: add calculator README

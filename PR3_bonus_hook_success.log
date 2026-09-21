@@ -1,0 +1,3 @@
+[main b7908a1] chore: test git hook
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test_hook.txt

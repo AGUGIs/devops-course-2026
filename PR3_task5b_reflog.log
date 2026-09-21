@@ -1,0 +1,20 @@
+98ff637 HEAD@{0}: checkout: moving from temp/lost-branch to main
+7ac4246 HEAD@{1}: commit: feat: add very important data
+98ff637 HEAD@{2}: checkout: moving from main to temp/lost-branch
+98ff637 HEAD@{3}: cherry-pick: fix: critical bug in calculator
+2540728 HEAD@{4}: checkout: moving from hotfix/urgent-fix to main
+01a571e HEAD@{5}: commit: feat: add multiply and divide (experimental)
+98ff637 HEAD@{6}: commit: fix: critical bug in calculator
+2540728 HEAD@{7}: checkout: moving from main to hotfix/urgent-fix
+2540728 HEAD@{8}: merge feature/calculator: Merge made by the 'ort' strategy.
+e0b9127 HEAD@{9}: checkout: moving from feature/calculator to main
+d5dcb1e HEAD@{10}: rebase (finish): returning to refs/heads/feature/calculator
+d5dcb1e HEAD@{11}: rebase (reword): docs: add calculator README
+bf19a87 HEAD@{12}: rebase (reword): add docs
+79642e8 HEAD@{13}: rebase (fixup): feat: implement subtract function
+248bc0c HEAD@{14}: rebase (reword): feat: implement subtract function
+975c1c2 HEAD@{15}: rebase (reword): add subtract
+6f62016 HEAD@{16}: rebase (fixup): feat: implement add function
+6672526 HEAD@{17}: rebase (reword): feat: implement add function
+bc57272 HEAD@{18}: rebase: fast-forward
+e0b9127 HEAD@{19}: rebase (start): checkout HEAD~6

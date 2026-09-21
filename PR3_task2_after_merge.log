@@ -1,0 +1,16 @@
+*   cc4b8de merge: integrate feature A
+|\  
+| * e0b9127 docs: add details for feature A
+| * 9675c0e feat: add feature A description
+|/  
+*   18c9f00 merge: resolve conflict in README.md
+|\  
+| * aa63a60 docs: update README with student info (variant 2)
+* | 85dac79 docs: update README with student info (variant 1)
+|/  
+| *   7a54cd0 On feature/hobby-project: WIP before PR3
+| |\  
+| | * b0326b6 index on feature/hobby-project: ee80e9e docs: svn_comparison.md
+| |/  
+| * ee80e9e docs: svn_comparison.md
+| * c6151ce docs: svn_comparison.md

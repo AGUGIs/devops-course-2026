@@ -1,0 +1,5 @@
+98ff637 fix: critical bug in calculator
+2540728 merge: integrate calculator feature
+d5dcb1e docs: add calculator README
+79642e8 feat: implement subtract function
+6f62016 feat: implement add function
