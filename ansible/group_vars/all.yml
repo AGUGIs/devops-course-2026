@@ -1,0 +1,7 @@
+---
+app_image: ghcr.io/agugis/devops-ci-app
+app_tag: "492f50258334b0e2a4953755d8c16564816f299c"
+app_container_name: devops-ci-app
+app_host_port: 5000
+app_internal_port: 5000
+automation_public_key_file: "{{ lookup('env', 'HOME') }}/.ssh/devops_vm.pub"
