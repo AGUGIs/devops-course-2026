@@ -1,0 +1,30 @@
+name: Ansible lab on Ubuntu VM
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'ansible/**'
+      - '.github/workflows/ansible-lab.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-vm:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      ANSIBLE_FORCE_COLOR: '0'
+      ANSIBLE_HOST_KEY_CHECKING: 'True'
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install Ansible and QEMU tooling
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends qemu-system-x86 cloud-image-utils sshpass
+          python -m pip install ansible-core==2.16.14
+          ansible-galaxy collection install -r ansible/requirements.yml
+      - name: Verify roles in a new Ubuntu 24.04 amd64 VM
+        run: bash ansible/lab/verify-vm.sh
