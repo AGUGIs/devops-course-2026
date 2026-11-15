@@ -3,8 +3,8 @@ set -euo pipefail
 umask 077
 lab=$(mktemp -d)
 cleanup() {
-  if [[ -s "$lab/qemu.pid" ]]; then
-    sudo kill "$(cat "$lab/qemu.pid")" 2>/dev/null || true
+  if sudo test -s "$lab/qemu.pid"; then
+    sudo kill "$(sudo cat "$lab/qemu.pid")" 2>/dev/null || true
   fi
   rm -rf "$lab"
 }
@@ -69,7 +69,7 @@ if [[ "$ready" == 0 ]]; then
 fi
 sshpass -e ssh "${ssh_opts[@]}" "${bootstrap_opts[@]}" student@127.0.0.1 'cloud-init status --wait && whoami && uname -m'
 
-export ANSIBLE_SSH_ARGS="-o UserKnownHostsFile=$lab/known_hosts -o StrictHostKeyChecking=yes -o ControlMaster=no"
+export ANSIBLE_SSH_ARGS="-o UserKnownHostsFile=$lab/known_hosts -o StrictHostKeyChecking=yes -o ControlMaster=auto -o ControlPersist=60s -o ControlPath=$lab/ansible-%C"
 export LAB_CONTROLLER="$lab/controller"
 python - "$lab" <<'PY'
 import json
